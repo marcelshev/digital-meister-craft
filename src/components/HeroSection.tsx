@@ -15,22 +15,22 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-card/50 z-0"></div>
       
       {/* Floating elements */}
-      <div className="absolute top-20 right-20 w-64 h-64 rounded-full bg-gradient-to-r from-agency-green/10 to-agency-neonGreen/10 blur-3xl"></div>
-      <div className="absolute bottom-20 left-20 w-72 h-72 rounded-full bg-gradient-to-r from-agency-neonGreen/10 to-agency-green/10 blur-3xl"></div>
+      <div className="absolute top-20 right-20 w-64 h-64 rounded-full bg-gradient-to-r from-agency-purple/10 to-agency-lightPurple/10 blur-3xl"></div>
+      <div className="absolute bottom-20 left-20 w-72 h-72 rounded-full bg-gradient-to-r from-agency-lightPurple/10 to-agency-purple/10 blur-3xl"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="flex flex-col space-y-6 animate-fade-in">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-agency-green/20 text-agency-green text-sm font-medium w-fit">
-              <span className="inline-block w-2 h-2 rounded-full bg-agency-green animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-agency-purple/20 text-agency-purple text-sm font-medium w-fit">
+              <span className="inline-block w-2 h-2 rounded-full bg-agency-purple animate-pulse"></span>
               DIGITAL MEISTER
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading leading-tight">
-              DÊ O <span className="text-transparent bg-clip-text bg-gradient-to-r from-agency-green to-agency-neonGreen">PLAY</span> NO SEU NEGÓCIO
+              DÊ O <span className="text-transparent bg-clip-text bg-gradient-to-r from-agency-purple to-agency-lightPurple">PLAY</span> NO SEU NEGÓCIO
             </h1>
             
-            <p className="text-lg text-gray-300 max-w-lg">
+            <p className="text-lg text-gray-600 max-w-lg">
               Crescer não precisa ser complicado. Com as ferramentas certas, o processo se torna mais rápido, previsível e escalável.
             </p>
 
@@ -48,7 +48,7 @@ const HeroSection = () => {
                 size="lg" 
                 variant="outline"
                 onClick={() => redirectToWhatsApp("Olá! Gostaria de conhecer mais sobre os serviços oferecidos.")}
-                className="border-agency-green/50 text-white hover:border-agency-green hover:bg-agency-green/10 hover:scale-105 transition-all"
+                className="border-agency-purple/50 text-foreground hover:border-agency-purple hover:bg-agency-purple/10 hover:scale-105 transition-all"
               >
                 Nossos Serviços
               </Button>
@@ -62,7 +62,7 @@ const HeroSection = () => {
                 alt="Digital Meister Logo" 
                 className="w-full h-full object-contain"
               />
-              <div className="absolute -inset-4 bg-gradient-to-r from-agency-green/20 to-agency-neonGreen/20 rounded-full blur-3xl -z-10"></div>
+              <div className="absolute -inset-4 bg-gradient-to-r from-agency-purple/20 to-agency-lightPurple/20 rounded-full blur-3xl -z-10"></div>
             </div>
           </div>
         </div>

@@ -17,36 +17,36 @@ const IntroSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             A Digital Meister combina tecnologia, estratégia e execução
           </h2>
-          <p className="text-lg text-gray-300">
+          <p className="text-lg text-gray-600">
             Simplificamos a captação de clientes, fortalecemos marcas e estruturamos negócios digitais de alto impacto.
             Com soluções personalizadas e automação inteligente, cada ação gera resultado imediato e duradouro.
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <Card className="border border-agency-green/20 bg-background/50 shadow-lg hover:shadow-agency-green/20 hover:scale-[1.02] transition-all duration-300">
+          <Card className="border border-agency-purple/20 bg-background/50 shadow-lg hover:shadow-agency-purple/20 hover:scale-[1.02] transition-all duration-300">
             <CardContent className="p-8">
               <div className="text-2xl font-bold mb-4 flex items-center gap-2">
-                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-r from-agency-green to-agency-neonGreen text-white">
+                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-r from-agency-purple to-agency-lightPurple text-white">
                   🚀
                 </span>
                 <h3>O que podemos fazer pelo seu negócio?</h3>
               </div>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start gap-2">
-                  <span className="text-agency-green font-bold text-lg">✅</span>
+                  <span className="text-agency-purple font-bold text-lg">✅</span>
                   <span>Atrair mais clientes sem desperdiçar dinheiro com anúncios ineficazes.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-agency-green font-bold text-lg">✅</span>
+                  <span className="text-agency-purple font-bold text-lg">✅</span>
                   <span>Transformar visitas em vendas, eliminando barreiras na jornada do cliente.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-agency-green font-bold text-lg">✅</span>
+                  <span className="text-agency-purple font-bold text-lg">✅</span>
                   <span>Automatizar processos repetitivos, para que você foque no que realmente importa.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-agency-green font-bold text-lg">✅</span>
+                  <span className="text-agency-purple font-bold text-lg">✅</span>
                   <span>Criar autoridade para sua marca, tornando seu negócio mais confiável e desejado.</span>
                 </li>
               </ul>
@@ -61,15 +61,15 @@ const IntroSection = () => {
             </CardContent>
           </Card>
           
-          <Card className="border border-agency-green/20 bg-background/50 shadow-lg hover:shadow-agency-green/20 hover:scale-[1.02] transition-all duration-300">
+          <Card className="border border-agency-purple/20 bg-background/50 shadow-lg hover:shadow-agency-purple/20 hover:scale-[1.02] transition-all duration-300">
             <CardContent className="p-8">
               <div className="text-2xl font-bold mb-4 flex items-center gap-2">
-                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-r from-agency-green to-agency-neonGreen text-white">
+                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-r from-agency-purple to-agency-lightPurple text-white">
                   📩
                 </span>
                 <h3>Fale conosco</h3>
               </div>
-              <p className="mb-6 text-gray-300">
+              <p className="mb-6 text-gray-600">
                 Fale com um especialista e veja qual solução se encaixa melhor para você.
                 Solicite um diagnóstico gratuito e descubra o caminho mais curto para crescer!
               </p>
@@ -87,7 +87,7 @@ const IntroSection = () => {
                   size="lg" 
                   variant="outline" 
                   onClick={() => redirectToWhatsApp("Olá! Gostaria de conhecer os casos de sucesso da Digital Meister.")} 
-                  className="w-full border-agency-green/50 hover:border-agency-green hover:bg-agency-green/10"
+                  className="w-full border-agency-purple/50 hover:border-agency-purple hover:bg-agency-purple/10"
                 >
                   Ver nossos casos de sucesso
                 </Button>

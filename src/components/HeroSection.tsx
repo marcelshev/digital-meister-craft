@@ -18,7 +18,7 @@ const HeroSection = () => {
       <div className="absolute top-20 right-20 w-64 h-64 rounded-full bg-gradient-to-r from-agency-purple/10 to-agency-lightPurple/10 blur-3xl"></div>
       <div className="absolute bottom-20 left-20 w-72 h-72 rounded-full bg-gradient-to-r from-agency-lightPurple/10 to-agency-purple/10 blur-3xl"></div>
       
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-6 lg:px-8 xl:px-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="flex flex-col space-y-6 animate-fade-in">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-agency-purple/20 text-agency-purple text-sm font-medium w-fit">
@@ -57,11 +57,64 @@ const HeroSection = () => {
 
           <div className="relative animate-scale-in flex justify-center">
             <div className="relative w-full max-w-md aspect-square hover-scale hover-glow">
-              <img 
-                src="/lovable-uploads/243b68e6-8153-4a5a-b211-f3363b5d16bb.png" 
-                alt="Digital Meister Logo" 
-                className="w-full h-full object-contain"
-              />
+              <svg 
+                viewBox="0 0 400 400" 
+                className="w-full h-full"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                {/* Marketing Dashboard */}
+                <rect x="50" y="80" width="300" height="240" rx="12" fill="url(#gradient1)" stroke="#6366f1" strokeWidth="2"/>
+                
+                {/* Charts */}
+                <rect x="70" y="100" width="80" height="60" rx="4" fill="#f8fafc"/>
+                <polyline points="75,140 85,130 95,135 105,125 115,120 125,115 135,110 145,105" 
+                          fill="none" stroke="#6366f1" strokeWidth="2"/>
+                
+                <rect x="170" y="100" width="80" height="60" rx="4" fill="#f8fafc"/>
+                <circle cx="210" cy="130" r="20" fill="none" stroke="#8b5cf6" strokeWidth="3"/>
+                <path d="M 210 110 A 20 20 0 0 1 225 145" fill="#8b5cf6"/>
+                
+                <rect x="270" y="100" width="60" height="60" rx="4" fill="#f8fafc"/>
+                <rect x="280" y="130" width="40" height="8" rx="2" fill="#6366f1"/>
+                <rect x="280" y="145" width="25" height="8" rx="2" fill="#8b5cf6"/>
+                
+                {/* Social Media Icons */}
+                <circle cx="90" cy="200" r="20" fill="#1877f2"/>
+                <text x="90" y="205" textAnchor="middle" fill="white" fontSize="12" fontWeight="bold">f</text>
+                
+                <circle cx="140" cy="200" r="20" fill="#E4405F"/>
+                <circle cx="140" cy="200" r="12" fill="none" stroke="white" strokeWidth="2"/>
+                <circle cx="148" cy="192" r="2" fill="white"/>
+                
+                <circle cx="190" cy="200" r="20" fill="#0077b5"/>
+                <text x="190" y="205" textAnchor="middle" fill="white" fontSize="12" fontWeight="bold">in</text>
+                
+                {/* Growth Arrow */}
+                <path d="M 250 180 L 320 180 L 315 175 M 320 180 L 315 185" 
+                      stroke="#10b981" strokeWidth="3" fill="none"/>
+                <circle cx="335" cy="180" r="8" fill="#10b981"/>
+                <text x="335" y="185" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold">↗</text>
+                
+                {/* Floating Elements */}
+                <circle cx="80" cy="50" r="15" fill="#fbbf24" opacity="0.8"/>
+                <text x="80" y="55" textAnchor="middle" fill="white" fontSize="12">💡</text>
+                
+                <circle cx="320" cy="60" r="12" fill="#ef4444" opacity="0.8"/>
+                <text x="320" y="65" textAnchor="middle" fill="white" fontSize="10">🎯</text>
+                
+                <circle cx="60" cy="350" r="18" fill="#8b5cf6" opacity="0.8"/>
+                <text x="60" y="355" textAnchor="middle" fill="white" fontSize="12">📊</text>
+                
+                <circle cx="340" cy="320" r="16" fill="#06b6d4" opacity="0.8"/>
+                <text x="340" y="325" textAnchor="middle" fill="white" fontSize="11">🚀</text>
+                
+                <defs>
+                  <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#f8fafc" />
+                    <stop offset="100%" stopColor="#e2e8f0" />
+                  </linearGradient>
+                </defs>
+              </svg>
               <div className="absolute -inset-4 bg-gradient-to-r from-agency-purple/20 to-agency-lightPurple/20 rounded-full blur-3xl -z-10"></div>
             </div>
           </div>

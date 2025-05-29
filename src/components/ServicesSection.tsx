@@ -85,13 +85,13 @@ const services = [
 
 const ServiceCard = ({ service }: { service: typeof services[0] }) => {
   return (
-    <Card className="border border-gray-100 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+    <Card className="border border-gray-100 shadow-sm hover:shadow-md transition-shadow overflow-hidden h-full">
       <div className="h-2 bg-gradient-to-r from-agency-purple to-agency-blue"></div>
       <CardHeader className="pb-2">
         <h3 className="text-lg font-bold text-agency-purple">{service.title}</h3>
         {service.subtitle && <p className="text-sm text-gray-500">{service.subtitle}</p>}
       </CardHeader>
-      <CardContent>
+      <CardContent className="flex-1">
         <p className="mb-6 text-gray-600">{service.description}</p>
         <div className="space-y-4">
           {service.items.map((item, index) => (
@@ -114,7 +114,7 @@ const ServiceCard = ({ service }: { service: typeof services[0] }) => {
 const ServicesSection = () => {
   return (
     <section className="py-20 bg-gray-50" id="services">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6 lg:px-8 xl:px-12">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <span className="text-agency-purple font-medium">NOSSOS SERVIÇOS</span>
           <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-6">
@@ -126,7 +126,7 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 auto-rows-fr">
           {services.map(service => (
             <ServiceCard key={service.id} service={service} />
           ))}

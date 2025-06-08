@@ -7,33 +7,15 @@ const Footer = () => {
   
   return (
     <footer className="bg-gray-900 text-gray-200">
-      <div className="container mx-auto px-6 lg:px-8 xl:px-12 py-16">
+      <div className="container mx-auto px-8 lg:px-12 xl:px-16 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="inline-block mb-6">
-              <svg 
-                width="180" 
-                height="40" 
-                viewBox="0 0 180 40" 
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-10"
-              >
-                <defs>
-                  <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#6366f1" />
-                    <stop offset="50%" stopColor="#8b5cf6" />
-                    <stop offset="100%" stopColor="#06b6d4" />
-                  </linearGradient>
-                </defs>
-                
-                {/* Logo Icon */}
-                <path d="M8 8 L8 32 L24 20 L8 8 Z" fill="url(#logoGradient)"/>
-                <path d="M16 8 L32 20 L16 32 L16 8 Z" fill="white" opacity="0.8"/>
-                
-                {/* Text */}
-                <text x="45" y="16" fill="white" fontSize="12" fontWeight="600" fontFamily="Inter, sans-serif">Digital</text>
-                <text x="45" y="30" fill="white" fontSize="12" fontWeight="600" fontFamily="Inter, sans-serif">Meister</text>
-              </svg>
+              <img 
+                src="/lovable-uploads/ccdcca91-2e4a-4e9d-bbc5-388cd92c502c.png" 
+                alt="Digital Meister"
+                className="h-10 w-auto"
+              />
             </Link>
             <p className="text-gray-400 mb-6 max-w-md">
               A Digital Meister combina tecnologia, estratégia e execução para simplificar a captação de clientes, 

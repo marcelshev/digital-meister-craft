@@ -1,13 +1,34 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  return <nav className="fixed w-full bg-white/90 backdrop-blur-sm z-50 py-4 shadow-sm px-[14px]">
+
+  const handleAnchorClick = (anchor: string) => {
+    setIsMenuOpen(false);
+    setTimeout(() => {
+      const element = document.getElementById(anchor);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
+
+  const redirectToWhatsApp = (message: string = "") => {
+    const phone = "5511977428558";
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://api.whatsapp.com/send/?phone=${phone}&text=${encodedMessage}`, "_blank");
+  };
+
+  return (
+    <nav className="fixed w-full bg-white/90 backdrop-blur-sm z-50 py-4 shadow-sm px-[14px]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
@@ -16,15 +37,36 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
-            <Link to="/" className="text-sm font-medium hover:text-agency-purple transition-colors">
+            <button 
+              onClick={() => handleAnchorClick('hero')}
+              className="text-sm font-medium hover:text-agency-purple transition-colors"
+            >
               Início
-            </Link>
-            <Link to="/#services" className="text-sm font-medium hover:text-agency-purple transition-colors">
+            </button>
+            <button 
+              onClick={() => handleAnchorClick('services')}
+              className="text-sm font-medium hover:text-agency-purple transition-colors"
+            >
               Serviços
-            </Link>
+            </button>
+            <button 
+              onClick={() => handleAnchorClick('about')}
+              className="text-sm font-medium hover:text-agency-purple transition-colors"
+            >
+              Sobre
+            </button>
+            <button 
+              onClick={() => handleAnchorClick('contact')}
+              className="text-sm font-medium hover:text-agency-purple transition-colors"
+            >
+              Contato
+            </button>
             
-            
-            <Button size="sm" className="bg-gradient-to-r from-agency-purple to-agency-blue text-white">
+            <Button 
+              size="sm" 
+              className="bg-gradient-to-r from-agency-purple to-agency-blue text-white"
+              onClick={() => redirectToWhatsApp("Olá! Gostaria de solicitar um diagnóstico gratuito.")}
+            >
               Diagnóstico Gratuito
             </Button>
           </div>
@@ -38,26 +80,46 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Navigation Menu */}
-        {isMenuOpen && <div className="md:hidden mt-4 py-4 border-t border-gray-100">
+        {isMenuOpen && (
+          <div className="md:hidden mt-4 py-4 border-t border-gray-100">
             <div className="flex flex-col space-y-4">
-              <Link to="/" className="text-sm font-medium hover:text-agency-purple transition-colors">
+              <button 
+                onClick={() => handleAnchorClick('hero')}
+                className="text-sm font-medium hover:text-agency-purple transition-colors text-left"
+              >
                 Início
-              </Link>
-              <Link to="/#services" className="text-sm font-medium hover:text-agency-purple transition-colors">
+              </button>
+              <button 
+                onClick={() => handleAnchorClick('services')}
+                className="text-sm font-medium hover:text-agency-purple transition-colors text-left"
+              >
                 Serviços
-              </Link>
-              <Link to="/#about" className="text-sm font-medium hover:text-agency-purple transition-colors">
+              </button>
+              <button 
+                onClick={() => handleAnchorClick('about')}
+                className="text-sm font-medium hover:text-agency-purple transition-colors text-left"
+              >
                 Sobre
-              </Link>
-              <Link to="/#contact" className="text-sm font-medium hover:text-agency-purple transition-colors">
+              </button>
+              <button 
+                onClick={() => handleAnchorClick('contact')}
+                className="text-sm font-medium hover:text-agency-purple transition-colors text-left"
+              >
                 Contato
-              </Link>
-              <Button size="sm" className="bg-gradient-to-r from-agency-purple to-agency-blue text-white w-full">
+              </button>
+              <Button 
+                size="sm" 
+                className="bg-gradient-to-r from-agency-purple to-agency-blue text-white w-full"
+                onClick={() => redirectToWhatsApp("Olá! Gostaria de solicitar um diagnóstico gratuito.")}
+              >
                 Diagnóstico Gratuito
               </Button>
             </div>
-          </div>}
+          </div>
+        )}
       </div>
-    </nav>;
+    </nav>
+  );
 };
+
 export default Navbar;

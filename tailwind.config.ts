@@ -132,12 +132,16 @@ export default {
 					}
 				},
 				'pulse': {
-					'0%, 100%': { 
-						transform: 'scale(1)' 
+					'0%, 100%': {
+						transform: 'scale(1)'
 					},
-					'50%': { 
-						transform: 'scale(1.05)' 
+					'50%': {
+						transform: 'scale(1.05)'
 					},
+				},
+				'play-gradient': {
+					'0%': { backgroundPosition: '0% 50%' },
+					'100%': { backgroundPosition: '200% 50%' },
 				}
 			},
 			animation: {
@@ -145,7 +149,8 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.5s ease-out',
 				'scale-in': 'scale-in 0.7s ease-out',
-				'pulse': 'pulse 2s infinite'
+				'pulse': 'pulse 2s infinite',
+				'play-gradient': 'play-gradient 3s linear infinite'
 			}
 		}
 	},
